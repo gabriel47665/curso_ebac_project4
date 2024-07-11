@@ -4,6 +4,7 @@ const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const obfuscate = require('gulp-obfuscate');
 
+// Tarefas individuais
 function compileSass() {
     return gulp.src('./src/styles/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }))
@@ -23,9 +24,17 @@ function compressJS() {
         .pipe(gulp.dest('./dist/scripts'))
 }
 
-exports.default = gulp.parallel(compileSass, compressImages, compressJS);
-exports.build = function () {
-    gulp.watch('./src/styles/*.scss', { ignoreInitial: false }, gulp.series(compileSass));
-    gulp.watch('./src/images/**/*', { ignoreInitial: false }, gulp.series(compressImages));
-    gulp.watch('./src/scripts/*.js', { ignoreInitial: false }, gulp.series(compressJS));
-};
+// Tarefa de build que executa todas as tarefas individuais
+const build = gulp.parallel(compileSass, compressImages, compressJS);
+
+// Tarefa de watch que observa as mudanças nos arquivos
+function watch() {
+    gulp.watch('./src/styles/*.scss', compileSass);
+    gulp.watch('./src/images/**/*', compressImages);
+    gulp.watch('./src/scripts/*.js', compressJS);
+}
+
+// Exporta as tarefas
+exports.build = build;
+exports.watch = watch;
+exports.default = build;
