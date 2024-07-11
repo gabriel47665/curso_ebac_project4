@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=2.5, minimum-scale=1">
+    <title>Vingadores</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="dist/styles/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>
+            <img src="dist/images/avengers_logo.png" alt="vingadores Logo">
+        </h1>
+        <nav>
+            <ul class="header__menu">
+                <li class="header__menu__link">
+                    <a href="#vingadores" class="title--small">Sobre</a>
+                </li>
+                <li class="header__menu__link">
+                    <a href="#films" class="title--small">Filmes</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner">
+        <img src="/dist/images/vingadores_banner.jpg" alt="vingadores Banner">
+    </section>
+    <section id="vingadores" class="about-vingadores">
+        <img src="dist/images/avengers_logo.png" alt="Vingadores Logo">
+        <div class="about-vingadores__text-section">
+            <h2 class="title--big">
+                Os Vingadores
+            </h2>
+            <p class="text--big">
+                Os Vingadores (ou "The Avengers" em inglês) é um grupo de super-heróis do universo da Marvel Comics. Eles são conhecidos por se unirem para enfrentar ameaças grandes demais para qualquer herói individualmente. O grupo foi criado por Stan Lee e Jack Kirby e fez sua primeira aparição na revista "The Avengers" #1, em 1963. Os membros originais incluem Homem de Ferro, Thor, Hulk, Homem-Formiga e Vespa, com o Capitão América se juntando posteriormente.
+            </p>
+            <p class="text--big">
+                Os Vingadores se tornaram amplamente conhecidos devido aos filmes do Universo Cinematográfico da Marvel (MCU), onde personagens como Homem de Ferro (Tony Stark), Capitão América (Steve Rogers), Thor, Hulk (Bruce Banner), Viúva Negra (Natasha Romanoff) e Gavião Arqueiro (Clint Barton) são membros principais. O primeiro filme dos Vingadores foi lançado em 2012, seguido por várias sequências e outros filmes relacionados que culminaram em eventos como "Avengers: Infinity War" (2018) e "Avengers: Endgame" (2019).
+            </p>
+        </div>
+    </section>
+    <section id="films" class="films">
+        <h2 class="title--big">Filmes</h2>
+        <div class="films__items">
+            <button data-film-button="film_vingadores_1" class="films__items__item films__items__item--active">
+                <img src="dist/images/filmes/vingadores1.jpg" alt="Os Vingadores">
+            </button>
+            <button data-film-button="film_vingadores_2" class="films__items__item">
+                <img src="dist/images/filmes/vingadores2.jpg" alt="Vingadores: Era de Ultron">
+            </button>
+            <button data-film-button="film_vingadores_3" class="films__items__item">
+                <img src="dist/images/filmes/vingadores3.jpg" alt="Vingadores: Guerra Infinita">
+            </button>
+            <button data-film-button="film_vingadores_4" class="films__items__item">
+                <img src="dist/images/filmes/vingadores4.jpg" alt="Vingadores Ultimato">
+            </button>
+        </div>
+    </section>
+    <section data-film-id="film_vingadores_1" class="about-film about-film--active">
+        <h2 class="title--big">
+            Os vingadores
+        </h2>
+        <div class="about-film__synopsis">
+            <h3 class="title">
+                Sinopse
+            </h3>
+            <p class="text">
+                Loki (Tom Hiddleston) retorna à Terra enviado pelos chitauri, uma raça alienígena que pretende dominar os humanos. Com a promessa de que será o soberano do planeta, ele rouba o cubo cósmico dentro de instalações da S.H.I.E.L.D. e, com isso, adquire grandes poderes. Loki os usa para controlar o dr. Erik Selvig (Stellan Skarsgard) e Clint Barton/Gavião Arqueiro (Jeremy Renner), que passam a trabalhar para ele. No intuito de contê-los, Nick Fury (Samuel L. Jackson) convoca um grupo de pessoas com grandes habilidades, mas que jamais haviam trabalhado juntas: Tony Stark/Homem de Ferro (Robert Downey Jr.), Steve Rogers/Capitão América (Chris Evans), Thor (Chris Hemsworth), Bruce Banner/Hulk (Mark Ruffalo) e Natasha Romanoff/Viúva Negra (Scarlett Johansson). Só que, apesar do grande perigo que a Terra corre, não é tão simples assim conter o ego e os interesses de cada um deles para que possam agir em grupo.
+            </p>
+            <div class="about-film__synopsis__rating">
+                <p class="text--big">
+                    2h 23min - 2012
+                </p>
+                <img src="dist/images/age_rating/12.png" alt="Age Rating 12">
+            </div>
+        </div>
+        <div class="about-film__trailer">
+            <h3 class="title">Trailer</h3>
+            <video id="film_vingadores_1_trailer_dub" src="/src/trailers/trailer_vingadores1.mp4" controls
+                poster="dist/images/video_poster.jpg"></video>
+        </div>
+    </section>
+    <section data-film-id="film_vingadores_2" class="about-film">
+        <h2 class="title--big">
+            Vingadores: Era de Ultron
+        </h2>
+        <div class="about-film__synopsis">
+            <h3 class="title">
+                Sinopse
+            </h3>
+            <p class="text">
+                Tentando proteger o planeta de ameaças como as vistas no primeiro Os Vingadores, Tony Stark busca construir um sistema de inteligência artifical que cuidaria da paz mundial. O projeto acaba dando errado e gera o nascimento do Ultron (voz de James Spader). Capitão América (Chris Evans), Homem de Ferro (Robert Downey Jr.), Thor (Chris Hemsworth), Hulk (Mark Ruffalo), Viúva Negra (Scarlett Johansson) e Gavião Arqueiro (Jeremy Renner) terão que se unir para mais uma vez salvar o dia.
+            </p>
+            <div class="about-film__synopsis__rating">
+                <p class="text--big">
+                    2h 21min - 2015
+                </p>
+                <img src="dist/images/age_rating/14.png" alt="Age Rating 14">
+            </div>
+        </div>
+        <div class="about-film__trailer">
+            <h3 class="title">Trailer</h3>
+            <video id="film_vingadores_2_trailer_dub" src="/src/trailers/trailer_vingadores2.mp4" controls
+                poster="dist/images/video_poster.jpg"></video>
+        </div>
+    </section>
+    <section data-film-id="film_vingadores_3" class="about-film">
+        <h2 class="title--big">
+            Vingadores: Guerra Infinita
+        </h2>
+        <div class="about-film__synopsis">
+            <h3 class="title">
+                Sinopse
+            </h3>
+            <p class="text">
+                Em Vingadores: Guerra Infinita, Thanos (Josh Brolin) enfim chega à Terra, disposto a reunir as Joias do Infinito. Para enfrentá-lo, os Vingadores precisam unir forças com os Guardiões da Galáxia, ao mesmo tempo em que lidam com desavenças entre alguns de seus integrantes.
+            </p>
+            <div class="about-film__synopsis__rating">
+                <p class="text--big">
+                    2h 36min - 2018
+                </p>
+                <img src="dist/images/age_rating/14.png" alt="Age Rating 14">
+            </div>
+        </div>
+        <div class="about-film__trailer">
+            <h3 class="title">Trailer</h3>
+            <video id="film_vingadores_3_trailer_dub" src="/src/trailers/trailer_vingadores3.mp4" controls
+                poster="dist/images/video_poster.jpg"></video>
+        </div>
+    </section>
+    <section data-film-id="film_vingadores_4" class="about-film">
+        <h2 class="title--big">
+            Vingadores Ultimato
+        </h2>
+        <div class="about-film__synopsis">
+            <h3 class="title">
+                Sinopse
+            </h3>
+            <p class="text">
+                Em Vingadores: Ultimato, após Thanos eliminar metade das criaturas vivas em Vingadores: Guerra Infinita, os heróis precisam lidar com a dor da perda de amigos e seus entes queridos. Com Tony Stark (Robert Downey Jr.) vagando perdido no espaço sem água nem comida, o Capitão América/Steve Rogers (Chris Evans) e a Viúva Negra/Natasha Romanov (Scarlett Johansson) precisam liderar a resistência contra o titã louco.
+            </p>
+            <div class="about-film__synopsis__rating">
+                <p class="text--big">
+                2h 36min - 2019
+                </p>
+                <img src="dist/images/age_rating/12.png" alt="Age Rating 12">
+            </div>
+        </div>
+        <div class="about-film__trailer">
+            <h3 class="title">Trailer</h3>
+            <video id="film_vingadores_4_trailer_dub" src="/src/trailers/trailer_vingadores4.mp4" controls
+                poster="dist/images/video_poster.jpg"></video>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p class="text">
+            Exercício Prático - Projeto 4 (EBAC - Front-End) <br>
+            Desenvolvido por Gabriel Saraiva©
+        </p>
+        <span>
+            <a href="https://www.linkedin.com/in/gabriel47665" target="_blank">
+                <img src="dist/images/LinkedIn.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/gabriel47665" target="_blank">
+                <img src="dist/images/GitHub.png" alt="GitHub">
+            </a>
+        </span>
+    </footer>
+    <script src="dist/scripts/main.js"></script>
+</body>
+
+</html>
