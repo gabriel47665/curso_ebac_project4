@@ -1,30 +1,29 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const obfuscate = require('gulp-obfuscate');
 
-async function compileSass() {
+function compileSass() {
     return gulp.src('./src/styles/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(gulp.dest('./dist/styles/'));
 }
 
-async function compressImages() {
-    const imagemin = (await import('gulp-imagemin')).default;
+function compressImages() {
     return gulp.src('./src/images/**/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./dist/images'));
+        .pipe(gulp.dest('./dist/images'))
 }
 
-async function compressJS() {
+function compressJS() {
     return gulp.src('./src/scripts/*.js')
         .pipe(uglify())
         .pipe(obfuscate())
-        .pipe(gulp.dest('./dist/scripts'));
+        .pipe(gulp.dest('./dist/scripts'))
 }
 
 exports.default = gulp.parallel(compileSass, compressImages, compressJS);
-
 exports.build = function () {
     gulp.watch('./src/styles/*.scss', { ignoreInitial: false }, gulp.series(compileSass));
     gulp.watch('./src/images/**/*', { ignoreInitial: false }, gulp.series(compressImages));

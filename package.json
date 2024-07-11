@@ -1,5 +1,5 @@
 {
-  "name": "projeto-4-ex",
+  "name": "projeto-4",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^5.0.0",
-    "gulp-imagemin": "^9.1.0",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
     "gulp-obfuscate": "^0.2.9",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
